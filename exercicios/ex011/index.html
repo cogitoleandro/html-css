@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagens dinâmicas</title>
+</head>
+<body>
+    <h1>Imagens dinâmicas</h1>
+    <p>Tente abrir em varios dispositivos ou aumentar e diminuir seu browser</p>
+    <picture>
+        <source media="(max-width:750px )" srcset="Imagens/image_p.png" type="image/png">
+        <source media="(max-width:1050px )" srcset="Imagens/image_m.png" type="image/png">
+     <img src="Imagens/image_g.png"  alt="imagem flexivel" >
+
+    </picture>
+    <h1>Reproduzindo audios</h1>
+    <p>vamos aprender a reproduzir audio em HTML5</p>
+    <audio src="midia/redemptionSong.mp3" controls ></audio>
+    <!--Formatos dependerá do navegador MP3,WAV,OGG-->
+    <p>Essa musica eu gosto! Você ouça se quiser ...</p>
+    <audio preload="metadata" controls>
+        <source src="midia/soultosquase.mp3" type="audio/mpeg">
+        <!--Segundo o professor caso não carregasse o arquivo iria aparecer essa "msgbox"aonde seria possivel levar o usuario a ouvir de fato a musica por meio de um link usando a tag "a"-->
+        <p>Infelizmente não é possível ouvir se quiser ouça por meio <a href="https://www.youtube.com/watch?v=L9kE_CC_PZY">youtube</a></p>
+     
+
+    </audio>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover</title>
+    <link rel="shortcut icon" href="acordo2.ico" type="image/x-icon">
+    <style>
+     div{
+       font-family: Verdana, Geneva, Tahoma, sans-serif
+
+     }
+     div > p{
+        display: none;
+        
+     }
+     div:hover > p{
+        display: block;
+        color: white;
+        background-color: red;
+     }
+     div:hover{
+        background-color: red;
+     }
+     
+     
+    </style>
+</head>
+<body>
+    <h1>Exemplo de hover</h1>
+    <p>Passe o mouse aqui</p>
+    <div>Passe o mouse aqui
+        <p>Texto escondido ...</p>
+    </div>
+    <p><a href="links.html">Ir para o exemplo de links</a></p>
+    <p>Fim do exemplo</p>
+</body>
+</html>

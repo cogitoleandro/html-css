@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+<style>
+      body {
+        background-color: yellow;
+        font-family: 'Times New Roman', Times, serif;
+        
+      }
+      h1 {
+        color: blue;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+      p {
+      text-align: justify;
+      }
+</style>
