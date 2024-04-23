@@ -60,6 +60,10 @@ section {
     font-size: 1.5vw;
 }
 
+section > p {
+    padding-bottom: 2em;
+}
+
 section.normal {
     background-color: whitesmoke;
     color: black;
@@ -68,16 +72,29 @@ section.normal {
 section.imagem {
     background-color: rgba(27, 26, 26, 0.055);;
     color: whitesmoke;
-
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.521);
+    background-attachment: fixed;
+    /*--nesse shorthand a propriedade inset a sombra ficará para dentro, caso precise ao voltar aqui verá!--*/
 }
 
 section.imagem > p {
     display: inline-block;
     padding: 5px;
     background-color: black;
-
+    text-shadow: 1px 1px 0px black;
 }
 
+section#img {
+    background-image: url('../imagens/background001.jpg');
+    background-position: right center;
+    background-size: cover;
+}
+
+section#img1 {
+    background-image: url('../imagens/background002.jpg');
+    background-position: right center;
+    
+}
 footer {
     background-color: black;
     color: whitesmoke;
