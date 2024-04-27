@@ -4,15 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Estudos de Iframe</title>
+    <style>
+        iframe {
+            width: 500px;
+            height: 500px;
+            
+        }
+    </style>
 </head>
 <body>
     <h1>Testando o uso de um iframe</h1>
+    <!--Por padrão o iframe tem 300x150 px
+        O parametro do frameborder é 0 (sem borda) ou 1 com borda de 1px, podemos configurar não só outras bordas mas também tamanho dentre outras configurações em CSS
+        O parametro sscolling abaixo configurado inline é a despeito da barra de rolagem "auto"(se tiver rolagem aparece a barra,
+        o "yes" mesmo que tiver sem a necessidade da barra de rolagem aparecerá ela ou "no" que mesmo que tiver que rolar não aparecerá, no entanto, em alguns navegadores
+        não funciona ...)-->
     <p>Acessando o site do 
-        <iframe src="https://www.cursoemvideo.com" frameborder="1"></iframe>
+
+        <iframe src="https://www.cursoemvideo.com" frameborder="1" scolling="no"></iframe>
         para aprender a programar.
     </p>
-    <p>
-        Acessando o site do <iframe src="https://google.com.br" frameborder="1"></iframe> para fazer uma pesquisa.
+     <p>Acessando meu github 
+
+        <iframe src="https://cogitoleandro.github.io/projeto-cordel/" frameborder="1"></iframe> para conhecer meu perfil ...
     </p>
+    
 </body>
 </html>
