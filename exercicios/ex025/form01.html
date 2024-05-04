@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <!--No formulário a propriedade autocomplete como pode ver abaixo com as opções on e off, podemos inserir ou desligar o preenchimento automatico, sugestivo de nosso formulário, independente das configurações do navegador
+     A propriedade label é para vincular o input ao nome dele-->
+    <h1>Meu primeiro formulário</h1>
+    <form action="cadastro.php" method="get" autocomplete="on">  
+        <p><label for="inome">Nome:</label> <input type="text" name="nome" id="inome"></p>
+        <p><label for="isobrenome">Sobrenome:</label> <input type="text" name="sobrenome" id="isobrenome"></p>
+        <p><input type="submit" value="Enviar"></p>
+        <!--
+            Os 2 métodos para envio de formulários são o GET e o POST, sendo o GET padrão, até onde o professor lecionou apenas pelo POST ocultaria os dados enviados na URL subsequente. No entanto, ainda não está seguro os dados lecionando mostrou como podemos captura-los por meio da inspeção, assim ao rodar o script com os dados na aba network podemos acessa-los ao clicar no arquivo de script e agora (2024, na aba playload)na do professor apenas na aba Headers rolando chegaria aos dados, os quais o usuário digita em nossos formulários. 
+            Concluindo para tornar mais seguros devemos criptografar nossos dados por meio de protocolos https, assim protegemos os dados dos usuários em nossas aplicações web.
+            Pelo método GET apenas podemos mandar 3.000 letras, excedendo isso ele não envia. Para mandar arquivos ou dados sensivéis é indicado o post e criptografar por meio de protocolos https. COm avanços na nossas infraestrutura a questão de volocidade não tem diferença entre os métodos GET e POST.
+            Agora testando descobri que só é possível usar a propriedade autocomplete no navegador google crome no edge ele não funciona. dia 04 de maio de 2024, hoje!
+        -->
+    </form>
+</body>
+</html>
