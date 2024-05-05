@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select, datalist e textarea</title>
+</head>
+<body>
+    <h1>Exemplo de formulário</h1>
+    <form action="cadastro.php" method="get">
+        <p>
+            <label for="">Estado: </label>
+            <select name="estado" id="iest"> <!--O PHP pegará o value do option-->
+                <option value="" selected> ---- Escolha ---- </option> <!--Assim podemos iniciar a html-->
+                <optgroup label="Distrito Federal">
+                    <option value="DF">Brasilía</option>
+                </optgroup>
+                <optgroup label="Região Norte">
+                    <option value="AM">Amazonas</option>
+                    <option value="PA">Pará</option>
+                    <option value="RR">Roraima</option>
+                    <option value="AP">Amapá</option>
+                    <option value="RO">Rondônia</option>
+                    <option value="AC">Acre</option>
+                </optgroup>
+                <optgroup label="Região Nordeste">
+                    <option value="PI">Piauí</option>
+                    <option value="MA">Maranhão</option>
+                    <option value="PE">Pernambuco</option>  
+                    <option value="PB">Paraíba</option>
+                    <option value="CE">Ceará</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="BA">Bahia</option>
+                    <option value="AL">Alagoas</option>
+                    <option value="SE">Sergipe</option>
+                </optgroup>
+                <optgroup label="Região Centro Oeste">
+                    <option value="MT">Mato Grosso</option>
+                    <option value="MS">Mato Grosso do Sul</option>
+                    <option value="GO">Góias</option>
+                    <option value="TO">Tocantins</option>
+                </optgroup>
+                <optgroup label="Região Sudeste">
+                    <option value="SP">São Paulo</option> <!--Podemos carregar a html já selecionada por meio do atributo "selected" -->
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="ES">Espirito Santo</option>
+                </optgroup>
+                <optgroup label="Região Sul">
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="PR">Paraná</option>    
+                </optgroup>            
+
+            </select>
+        </p>
+        <p>
+            <label for="oprof">Profissão: </label>
+            <input type="text" name="prof" id="oprof" list="lstprof">
+            <datalist id="lstprof"> <!--Para aparecer em formato de lista na caixa de texto é necessário este atributo no datalist "id" neste caso id="lstprof", então no input text vinculamos a lista por meio do atributo list = o id da lista, neste caso id="lstprof"-->
+                <option value="PSI">Psicológo</option>
+                <option value="ADM">Administrador</option>
+                <option value="MED">Médico</option>
+                <option value="BIO">Biológo</option>
+                <option value="EST">Estoquista</option>
+                <!--Podemos retirar o atributo value, assim aparecerá apenas o atributo do option, no primeiro caso Psicológo ele tratará assim.Caso deixe em branco o atributo value="" ele não aparecerá na lista-->
+            </datalist>
+        </p>
+        <p>
+            <strong>A diferença entre select e o datalist é que podemos incluir dados no datalist enquanto que no select não, no select apenas selecionamos as opsções previamente programadas e cadastradas enquanto que no datalist podemos incluir por meio de dados inseridos na html carregada e rodando.</strong>
+        </p>
+        <p>
+            <label for="imsg">Mensagem: </label> <br>
+            <textarea name="msg" id="imsg" cols="50" rows="20"></textarea> <!--POdemos informar colunas e linhas por meio dos atributos cols e rows, assim bem como escolher o tamanho da caixa de texto conforme a necessidade ou o querer, os dados quando forem aumentando irá aparecer a barra de rolagem-->
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+    
+</body>
+</html>
