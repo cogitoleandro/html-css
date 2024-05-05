@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mais exemplos</title>
+</head>
+<body>
+    <h1>Exemplo de formulário</h1>
+    <form action="cadastro.php" method="get">
+        <p>
+            <label for="oidade">Em que ano você nasceu? </label>
+            <input type="number" name="idade" id="oidade" min="1950" max="2024" value="1995" oninput="calcidade()">
+        </p>
+        <p><label for="osoma">Sua idade é: </label>
+            <output name="soma" id="osoma">0</output>
+        </p>
+
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+    <script>
+        function calcidade() {
+            var atual = new Date().getFullYear()
+            osoma.innerHTML = Number(atual) - Number(oidade.value)
+        }
+    </script>
+</body>
+</html>
