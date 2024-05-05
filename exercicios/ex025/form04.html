@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário telefone e e-mail</title>
+</head>
+<body>
+    <h1>Telefones e e-mails</h1>
+    <form action="cadastro.php" method="get" autocomplete="on">
+        <fieldset> <!--Esta tag fieldset serve para agrupar os campos-->
+            <legend>Dados pessoais</legend> <!--Podemos inserir o título com a tag "legend"-->
+            <p>
+                <label for="iemail">E-mail: </label>
+                <input type="email" name="email" id="iemail" required size="50">
+            </p>
+            <p>
+                <label for="itel">Telefone: </label>
+                <input type="tel" name="tel" id="itel" autocomplete="tel" pattern="^\d{(2)} \d{4}-\d{4}$" required>
+            </p>
+        </fieldset>
+        <!--Estudar mais sobre RegEx
+        HTML5 telefone pattern
+        Isso se refere a padrões que serão impostos em seu site como parametros do campo
+        No entanto, isso se faz ou em PHP ou JavaScript-->
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+</body>
+</html>
