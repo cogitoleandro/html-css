@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input: Color, range e file</title>
+    <style>
+        body {
+            background-color: #f10a0a;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exemplo de formulário</h1>
+    <form action="cadastro.php" method="get" aria-autocomplete="on">
+        <p>
+            <!--Com esse input criamos uma caixa que interage de forma a formar todas as cores possíveis por meio de código hexadecimal o qual podemos captar por meio do script php assim penso que podemos programar para mudar a cor de um componente do site ficando de forma ao usuário a escolher por meio de si mesmo. A caixa padrão é preta, podendo mudar pelo atributo value = "a cor que quiser"
+            O padrão sairá a caixa conforme descrito acima e rodando em um navegador esta marcação html verá-->
+            <label for="icor">Cor: </label>
+            <input type="color" name="cor" id="icor" value="(247, 8, 8)">
+        </p>
+        <p>
+            <!--O nivel deste marcador será de 0 a 100 podendo mudar pelo atributo min e max, conforme abaixo, sempre ele apontará ao carregar a html em 50% (metade), também podendo alterar or meio do atributo value =, conforme a baixo. Assim podemos fazer como preferirmos ...-->
+            <label for="inivel">Nível de satisfação: </label>
+            <input type="range" name="nivel" id="inivel" min="1" max="10" value="1">
+        </p>
+        <!--POdemos usar o input imagem, com este controle será nos que carregaremos o arquivo e, com o file o usuário carrega o seu arquivo. POdemos deixar para p usuário, mas, tem que programar php, javascript ou outra linguagem para ficar dinamico a interação da caixa.
+        Cm estes arquivos também é recomendável que use o metodo post no formulário, o metodo get tem um limite de 3.000 bytes, mais que isso é com o post que trabalhamos-->
+            <label for="ifoto">Foto do perfil: </label>
+            <input type="file" name="foto" id="ifoto">
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+</body>
+</html>
