@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atributos para os campos de formulários</title>
+</head>
+<body>
+    <!-- "Atributos para os campos, para o autocompelte que em seu atributo pode ser on ou off, deverá estar ativo o do formulário então podemos atribuir aos inputs também."
+        label = è necessária para vincular a caixa de texto (input)ao campo isso se dá pelo id do input, conforme abaixo.
+        Ao criar o input logo vem padrão os atributos "name" e "id"
+        sendo o nome para PHP e o ID usamos em HTML e para configura CSSs também.
+        required = Este atributo torna o campo obrigatório.
+        min e maxlength = podemos estipular o mínimo e o maxímo de letras a serem usadas no campo, isso será útil quando construirmos bancos de dados e os formulários trabalharem sincronizados com as informações.
+        size = configuramos o tamanho da caixa de texto assim bem como a quantidade de letras na string do campo, também configuramos no banco de dados.
+        placeholder = POdemos identificar o campo para melhor apresentação do que é o campo aos usuários do site (nosso formulário)
+        Concluindo o autocomplete nos campos (caixa de textos"inputs" temos diversas opções, portanto para cada situação tem aquela que se adeque a sua necessidade de forma a satisfazer o que quer naquele campo.)
+
+    -->
+    <h1>Teste de formulário</h1>
+    <form action="cadastro.php" method="post" autocomplete="on">
+        <p>
+            <label for="iusu">Usuário: </label>
+            <input type="text" name="usu" id="iusu" required minlength="5" maxlength="15" size="12" placeholder="Nome do usuário" autocomplete="username">
+        </p>
+        <p><label for="isen">Senha: </label>
+            <input type="password" name="sen" id="isen" required minlength="8" maxlength="10" size="10" placeholder="Minímo 8 letras" autocomplete="current-password">
+        </p>
+        <p><input type="submit" value="Enviar">
+        <input type="reset" value="Limpar"></p>
+    </form>
+</body>
+</html>
