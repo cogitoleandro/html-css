@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checbox e radio</title>
+</head>
+<body>
+    <h1>Exemplo de formulário</h1>
+    <form action="cadastro.php" method="get" autocomplete="on">
+        <fieldset>
+            <!--Para marcar opções por meio de "radio" é necessário deixa-lós com o mesmo nome para não marcar os dois ou alternar eles, portanto de o mesmo nome, assim só é possível marcar um ou outro e eles se alternam entre si ...-->
+            <legend>Sexo</legend>
+            <input type="radio" name="sexo" id="isexmas"> <label for="isexmas" value="M">Masculino</label> <br>
+            <input type="radio" name="sexo" id="isexfem"> <label for="isexfem" value="F">Feminino</label>
+
+        </fieldset>
+        <fieldset>
+            <legend>Esportes Favoritos</legend>
+            <input type="checkbox" name="espfut" id="ifut"> <label for="ifut">Futebol..</label>
+            <input type="checkbox" name="espfutame" id="ifutame" checked> <label for="ifutame">Futebol Americano</label> <br> <!--Neste caso como observa-se o atributo checked já aparecerá a opção marcada, podendo o usuário desmarca-lá se for o caso ...-->
+            <input type="checkbox" name="espvol" id="ivol"> <label for="ivol">Voleiboll</label> 
+            <input type="checkbox" name="esphockey" id="ihoc">Hockey <br> <!--Para marcar clicando em cima da palavra é preciso envelopar com a label, isso é interessante para uso em smartphones-->
+        </fieldset>
+
+
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+
+    </form>
+    
+</body>
+</html>
