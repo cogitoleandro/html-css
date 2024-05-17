@@ -1,0 +1,3 @@
+Midia query = Midia types e midia Features
+Screen = tela (telas de relogio, smartphones, tablets, notebooks, desktops, tv(s) ...)
+Ao usarmos as css para midia podemos informar midias types e também midia features, as midias types são informadas sem parenteses conforme visto no exercício as features devem ser informadas entre parenteses (orientation: e a midia a ser usada, orientada a tela do usuário.)
