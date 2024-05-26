@@ -1,0 +1,35 @@
+@charset 'UTF-08';
+/* Também é possível fazer da forma que declare na própria HTML por meio da tag style sem a necessidad de criar um arquivo css */
+
+/* declarações gerais */
+* {
+    margin: 0px;
+    padding: 0px;
+}
+html, body {
+    width: 100vw;
+    height: 100vh;
+    background-color: #233eff;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+h1 {
+    color: whitesmoke;
+    text-shadow: 0px 3px 3px black;
+}
+
+/* declarações modo paisagem */
+@media screen and (orientation: landscape) {
+       body {
+            background-image: url('../imagens/cev-landscape.jpg');
+            background-position: left bottom;
+        }
+}
+/* declarações modo retrato */
+@media screen and (orientation: portrait) {
+        body {
+            background-image: url('../imagens/cev-portrait.jpg');
+            background-position: center bottom;
+            
+        }
+}
